@@ -1,0 +1,14 @@
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\bin\Debug\net9.0-windows\CourseWorkWithoutAI.exe
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\bin\Debug\net9.0-windows\CourseWorkWithoutAI.deps.json
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\bin\Debug\net9.0-windows\CourseWorkWithoutAI.runtimeconfig.json
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\bin\Debug\net9.0-windows\CourseWorkWithoutAI.dll
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\bin\Debug\net9.0-windows\CourseWorkWithoutAI.pdb
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.AssemblyInfoInputs.cache
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.AssemblyInfo.cs
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.csproj.CoreCompileInputs.cache
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.dll
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\refint\CourseWorkWithoutAI.dll
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.pdb
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.genruntimeconfig.cache
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\ref\CourseWorkWithoutAI.dll
