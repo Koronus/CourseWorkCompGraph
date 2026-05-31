@@ -17,6 +17,8 @@ public class Normalizator
     private bool check2;
     private bool check3;
 
+    private int countTriangle = 3;
+
     public Normalizator(List<Triangle> allTriangles)
     {
         this.allTriangles = allTriangles;

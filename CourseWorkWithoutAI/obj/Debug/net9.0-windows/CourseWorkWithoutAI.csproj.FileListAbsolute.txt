@@ -12,3 +12,4 @@ C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\n
 C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.pdb
 C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.genruntimeconfig.cache
 C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\ref\CourseWorkWithoutAI.dll
+C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\obj\Debug\net9.0-windows\CourseWorkWithoutAI.sourcelink.json

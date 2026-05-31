@@ -97,12 +97,15 @@ public class Matrix
     public Matrix LookAt(Vector center, Vector up , Vector eye)
     {
         Vector z = center - eye;
+        z.normalize();
         Vector x = up ^ z;
+        x.normalize();
         Vector y = z ^ x;
+        y.normalize();
         
-        mt[0, 0] = x.GetV1(); mt[0, 1] = x.GetV2(); mt[0, 2] = x.GetV3(); mt[0,3] = -eye.GetV1();
-        mt[1, 0] = y.GetV1(); mt[1, 1] = y.GetV2(); mt[1, 2] = y.GetV3(); mt[1,3] = -eye.GetV2();
-        mt[2, 0] = z.GetV1(); mt[2, 1] = z.GetV2(); mt[2, 2] = z.GetV3(); mt[2,3] = -eye.GetV3();
+        mt[0, 0] = x.GetV1(); mt[0, 1] = x.GetV2(); mt[0, 2] = x.GetV3(); mt[0,3] = -center.GetV1();
+        mt[1, 0] = y.GetV1(); mt[1, 1] = y.GetV2(); mt[1, 2] = y.GetV3(); mt[1,3] = -center.GetV2();
+        mt[2, 0] = z.GetV1(); mt[2, 1] = z.GetV2(); mt[2, 2] = z.GetV3(); mt[2,3] = -center.GetV3();
 
         return this;
     }
@@ -114,7 +117,7 @@ public class Matrix
         mt[1, 1] = 2.0 / (t - b);
         mt[2, 2] = -2.0 / (f - n);
         mt[0, 3] = -(r + l) / (r - l);
-        mt[1, 3] = -(b + t) / (b - t);
+        mt[1, 3] = -(t + b) / (t - b);
         mt[2, 3] = -(f + n) / (f - n);
         
         // Console.WriteLine(mt[0, 0]);
@@ -130,7 +133,7 @@ public class Matrix
     public Matrix ViewPort(double width, double height, double x, double y,double depth)
     {
         mt[0, 0] = width / 2.0;    mt[0, 3] = x + width / 2.0;
-        mt[1, 1] = height / 2.0;   mt[1, 2] = y + height / 2.0;
+        mt[1, 1] = -height / 2.0;   mt[1, 3] = y + height / 2.0;
         mt[2, 2] = depth / 2.0;    mt[2, 3] = x + depth / 2.0;
 
         return this;
@@ -160,6 +163,27 @@ public class Matrix
         }
 
         return result;
+    }
+    
+    public static Vector operator *(Matrix A, Vector B)
+    {
+        double x = A.mt[0, 0] * B.GetV1() + A.mt[0, 1] * B.GetV2() + 
+                   A.mt[0, 2] * B.GetV3() + A.mt[0, 3] * B.GetW();
+        double y = A.mt[1, 0] * B.GetV1() + A.mt[1, 1] * B.GetV2() + 
+                   A.mt[1, 2] * B.GetV3() + A.mt[1, 3] * B.GetW();
+        double z = A.mt[2, 0] * B.GetV1() + A.mt[2, 1] * B.GetV2() + 
+                   A.mt[2, 2] * B.GetV3() + A.mt[2, 3] * B.GetW();
+        double w = A.mt[3, 0] * B.GetV1() + A.mt[3, 1] * B.GetV2() + 
+                   A.mt[3, 2] * B.GetV3() + A.mt[3, 3] * B.GetW();
+        
+        if (w != 0)
+        {
+            x /= w;
+            y /= w;
+            z /= w;
+        }
+
+        return new Vector(x, y, z);  
     }
 
     public void toString()

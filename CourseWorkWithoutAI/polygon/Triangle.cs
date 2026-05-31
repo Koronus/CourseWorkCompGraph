@@ -16,6 +16,10 @@ public class Triangle
     private int indexV2;
     private int indexV3;
 
+    private double intensityV1;
+    private double intensityV2;
+    private double intensityV3;
+
     private string figure;
     
     private Color color;
@@ -45,6 +49,21 @@ public class Triangle
     public string GetFigure()
     {
         return figure;
+    }
+
+    public Vector getV1()
+    {
+        return V1;
+    }
+
+    public Vector getV2()
+    {
+        return V2;
+    }
+
+    public Vector getV3()
+    {
+        return V3;
     }
 
     public int GetIndexV1()
@@ -90,6 +109,41 @@ public class Triangle
     public Vector getN3()
     {
         return N3;
+    }
+
+    public void setIntensity1(double intensity)
+    {
+        intensityV1 = intensity;
+    }
+    
+    public void setIntensity2(double intensity)
+    {
+        intensityV2 = intensity;
+    }
+    
+    public void setIntensity3(double intensity)
+    {
+        intensityV3 = intensity;
+    }
+
+    public double getIntensity1()
+    {
+        return intensityV1;
+    }
+    
+    public double getIntensity2()
+    {
+        return intensityV2;
+    }
+    
+    public double getIntensity3()
+    {
+        return intensityV3;
+    }
+
+    public Color getColor()
+    {
+        return color;
     }
     
     public String toString()
