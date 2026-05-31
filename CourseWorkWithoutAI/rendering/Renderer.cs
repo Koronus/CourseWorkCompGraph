@@ -4,7 +4,7 @@ namespace CourseWorkWithoutAI.rendering;
 
 public class Renderer
 {
-   // private Color[,] colorBuffer;
+
    private Bitmap bitmap;
     private double[,] zBuffer;
 
@@ -44,21 +44,20 @@ public class Renderer
        
         for (int y = y0; y <= y2; y++)
         {
-            //bool secondHalf;
-            //if (y > y2 - y1){ secondHalf = true; }
+
             if (y < 0)
                 continue;
 
             double t02 = (double)(y - y0) / (y2 - y0);
             double xA = x0 + t02 * (x2 - x0);
             
-            // ← ДОБАВИТЬ: интерполяция Z и интенсивности для левой границы
+
             double zA = z0 + t02 * (z2 - z0);
-            double iA = i1 + (i3 - i1) * t02;  // i1 — верхняя вершина, i3 — нижняя
+            double iA = i1 + (i3 - i1) * t02;  
             
             double xB;
-            double zB = 0;  // ← ДОБАВИТЬ
-            double iB = 0;  // ← ДОБАВИТЬ
+            double zB;  
+            double iB;  
             
             if (y < y1)
             {
@@ -67,7 +66,7 @@ public class Renderer
                 double t01 = (double)(y - y0) / (y1 - y0);
                 xB = x0 + t01 * (x1 - x0);
                 
-                // ← ДОБАВИТЬ: интерполяция Z и интенсивности для правой границы (верх)
+
                 zB = z0 + t01 * (z1 - z0);
                 iB = i1 + (i2 - i1) * t01;
             }
@@ -78,7 +77,7 @@ public class Renderer
                 double t12 = (double)(y - y1) / (y2 - y1);
                 xB = x1 + t12 * (x2 - x1);
                 
-                // ← ДОБАВИТЬ: интерполяция Z и интенсивности для правой границы (низ)
+
                 zB = z1 + t12 * (z2 - z1);
                 iB = i2 + (i3 - i2) * t12;
             }
@@ -87,8 +86,8 @@ public class Renderer
             if (xA > xB)
             {
                 swap(ref xA, ref xB);
-                swap(ref zA, ref zB);  // ← ДОБАВИТЬ
-                swap(ref iA, ref iB);  // ← ДОБАВИТЬ
+                swap(ref zA, ref zB);  
+                swap(ref iA, ref iB);  
             }
             
             int startX = Math.Max(0, (int)Math.Ceiling(xA));
@@ -108,11 +107,11 @@ public class Renderer
                 if (x < 0 || x >= bitmap.Width) continue;
                 if (y < 0 || y >= bitmap.Height) continue;
                 
-                if (depth > zBuffer[x, y])  // предполагается, что zBuffer — это double[,]
+                if (depth > zBuffer[x, y])  
                 {
-                    zBuffer[x, y] = depth;  // обновляем глубину
+                    zBuffer[x, y] = depth; 
         
-                    // Цвет с учётом интенсивности
+           
                     int r = (int)(color.R * intensity);
                     int g = (int)(color.G * intensity);
                     int b = (int)(color.B * intensity);
@@ -146,9 +145,5 @@ public class Renderer
 
         bitmap.SetPixel(x, y, color);
     }
-    
-    
-    
-
 
 }

@@ -148,7 +148,6 @@ public class Triangle
     
     public String toString()
     {
-        // return $"({this.V1.toString()}), ({this.V2.toString()}), ({this.V3.toString()}),({this.indexV1}),({this.indexV2}),({this.indexV3}),({this.figure}),{this.color},({this.N1}),({this.N2}),({this.N3})";
          return $"({this.N1}),({this.N2.toString()}),({this.N3.toString()})";
     }
 }

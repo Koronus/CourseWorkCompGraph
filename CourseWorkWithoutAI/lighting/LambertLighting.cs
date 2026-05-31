@@ -25,9 +25,11 @@ public class LambertLighting
     {
         foreach (var triangle in allTriangles)
         {
-            intensityV1 = ambient + k_d * Math.Max(0, lightDir * triangle.Normal());
-            intensityV2 = ambient + k_d * Math.Max(0, lightDir * triangle.Normal());
-            intensityV3 = ambient + k_d * Math.Max(0, lightDir * triangle.Normal());
+            
+            intensityV1 = ambient + k_d * (lightDir * triangle.Normal());
+            intensityV2 = ambient + k_d * (lightDir * triangle.Normal());
+            intensityV3 = ambient + k_d * (lightDir * triangle.Normal());
+            
             triangle.setIntensity1(intensityV1);
             triangle.setIntensity2(intensityV2);
             triangle.setIntensity3(intensityV3);

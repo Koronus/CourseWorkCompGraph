@@ -7,7 +7,7 @@ namespace CourseWorkWithoutAI.parser;
 
 public class ObjParser
 {
-    private string pathFile = @"C:\Users\79829\RiderProjects\CourseWorkWithoutAI\CourseWorkWithoutAI\data\26.obj";
+    private string pathFile = @"data\26.obj";
 
     private Vector currentVector;
     private Dictionary<int, Vector> tetrahedrVertex = new Dictionary<int, Vector>();
@@ -65,26 +65,6 @@ public class ObjParser
 
             
         }
-
-        // int i = 1;
-        // foreach (Triangle triangle in tetrahedrTriangle)
-        // {
-        //     
-        //     Console.WriteLine(i + ") " + triangle.toString());
-        //     i++;
-        // }
-        // foreach (Triangle triangle in conusTriangle)
-        // {
-        //     
-        //     Console.WriteLine(i + ") " + triangle.toString());
-        //     i++;
-        // }
-        // foreach (Triangle triangle in cylinderTriangle)
-        // {
-        //     
-        //     Console.WriteLine(i + ") " + triangle.toString());
-        //     i++;
-        // }
         
     }
 

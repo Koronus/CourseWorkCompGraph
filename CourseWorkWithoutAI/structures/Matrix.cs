@@ -119,13 +119,6 @@ public class Matrix
         mt[0, 3] = -(r + l) / (r - l);
         mt[1, 3] = -(t + b) / (t - b);
         mt[2, 3] = -(f + n) / (f - n);
-        
-        // Console.WriteLine(mt[0, 0]);
-        // Console.WriteLine(mt[1, 1]);
-        // Console.WriteLine(mt[2, 2]);
-        // Console.WriteLine(mt[0, 3]);
-        // Console.WriteLine(mt[1, 3]);
-        // Console.WriteLine(mt[2, 3]);
 
         return this;
     }
@@ -134,7 +127,7 @@ public class Matrix
     {
         mt[0, 0] = width / 2.0;    mt[0, 3] = x + width / 2.0;
         mt[1, 1] = -height / 2.0;   mt[1, 3] = y + height / 2.0;
-        mt[2, 2] = depth / 2.0;    mt[2, 3] = x + depth / 2.0;
+        mt[2, 2] = depth / 2.0;    mt[2, 3] = depth / 2.0;
 
         return this;
     }

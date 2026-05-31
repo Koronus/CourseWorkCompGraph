@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="buffers\" />
+      <None Include="bin\Debug\net9.0-windows\data\26.obj" />
     </ItemGroup>
 
 </Project>
