@@ -40,7 +40,7 @@ public class Triangle
     {
         Vector a = V2 - V1;
         Vector b = V3 - V1;
-        Vector result = b ^ a;
+        Vector result = a ^ b;
         result.normalize();
 
         return result;

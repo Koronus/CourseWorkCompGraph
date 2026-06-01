@@ -20,11 +20,13 @@ public class ObjParser
     public List<Triangle> cylinderTriangle = new List<Triangle>();
 
     private int countLine = 1;
+    private int i = 0;
+    
     private string[] arrLines;
     private string[] partsLine;
     private string[] partsFacesLine;
     private string nameObj;
-    
+
     private Color color;
 
     private string[] splitSubArray(string line)
@@ -35,6 +37,7 @@ public class ObjParser
     public void Parse()
     {
         arrLines = File.ReadAllLines(pathFile);
+        
         foreach (string line in arrLines)
         {
             partsLine = splitSubArray(line);

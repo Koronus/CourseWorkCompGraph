@@ -36,14 +36,7 @@ public class Vector
         this.v3 = v3;
         w = 1;
     }
-
-    public Vector(double v1, double v2, double v3, double w)
-    {
-        this.v1 = v1;
-        this.v2 = v2;
-        this.v3 = v3;
-        this.w = w;
-    }
+    
 
     public void normalize()
     {

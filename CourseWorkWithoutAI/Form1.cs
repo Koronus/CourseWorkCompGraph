@@ -48,8 +48,8 @@ public partial class Form1 : Form
             for (int j = 0; j < zbuffer.GetLength(1); j++)
                 zbuffer[i, j] = -1000000.0;
         
-        ambient = 0.3;
-        k_d = 1.2;
+        ambient = 0.5;
+        k_d = 0.5;
         objParser.Parse();
         allTriangle.AddRange(objParser.tetrahedrTriangle);
         allTriangle.AddRange(objParser.conusTriangle);
@@ -71,8 +71,6 @@ public partial class Form1 : Form
             case Keys.Right:  cameraAngle += 2.5f; break;
             case Keys.Up:     cameraPitch += 2.5f; break;
             case Keys.Down:   cameraPitch -= 2.5f; break;
-            case Keys.Add:    cameraDistance -= 0.5f; break;
-            case Keys.Subtract: cameraDistance += 0.5f; break;
         }
         cameraPitch = Math.Max(-89, Math.Min(89, cameraPitch));
         cameraDistance = Math.Max(5, Math.Min(20, cameraDistance));
@@ -107,7 +105,7 @@ public partial class Form1 : Form
             for (int j = 0; j < zbuffer.GetLength(1); j++)
                 zbuffer[i, j] = -1000000.0;
 
-        Vector lightDir = new Vector(1, -1, -1);
+        Vector lightDir = new Vector(1, 1, -1);
         lightDir.normalize();
         lambertLighting = new LambertLighting(ambient,k_d,lightDir,allTriangle);
         lambertLighting.defIllumVertex();

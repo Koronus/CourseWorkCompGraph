@@ -12,4 +12,8 @@
       <None Include="bin\Debug\net9.0-windows\data\26.obj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="bin\Debug\net9.0-windows\data\12.obj" />
+    </ItemGroup>
+
 </Project>
